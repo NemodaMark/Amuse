@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Amuse
 {
@@ -24,29 +25,56 @@ namespace Amuse
     {
         static string connectionStr = "server=localhost;database=amuse;username=root;port=3306;password=";
         MySqlConnection connection = new MySqlConnection(connectionStr);
-
+        List<string> gameTitle = new List<string>();
+        List<string> strings = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
+            DateTime dateTime = DateTime.MinValue;
+            int newest = 0;
+            
             connection.Open();
-            string users = $"SELECT count(*) FROM `games`;";
-            MySqlCommand usersCmd = new MySqlCommand(users,connection);
-            MySqlDataReader usersRdr = usersCmd.ExecuteReader();
-            usersRdr.Read();
-            int usersCounted = usersRdr.GetInt32(0);
-            usersRdr.Close();
-            connection.Close();
-
-            for (int i = 0; i < 5; i++)
+            string libary = $"SELECT `id`,`title`,`added` FROM `games`;";
+            MySqlCommand libaryCmd = new MySqlCommand(libary, connection);
+            MySqlDataReader libaryRdr = libaryCmd.ExecuteReader();
+            while (libaryRdr.Read())
             {
-                RadioButton radio = new RadioButton();
-                radio.Name = "asd2"; 
-                radio.Content = usersCounted.ToString();
-                asd.Children.Add(radio);
+                gameTitle.Add(libaryRdr[1].ToString());
+                if (dateTime == DateTime.MinValue || dateTime <= DateTime.Parse(libaryRdr[2].ToString()))
+                {
+                dateTime = DateTime.Parse(libaryRdr[2].ToString());
+                    newest = int.Parse(libaryRdr[0].ToString());
+                }
             }
-            Grid.SetColumn(asd,1);
-            Grid.SetRow(asd,5);
+            libaryRdr.Close();
 
+            string New = $"SELECT `title` FROM `games` where `id` = {newest};";
+            MySqlCommand NewCmd = new MySqlCommand(New, connection);
+            MySqlDataReader NewRdr = NewCmd.ExecuteReader();
+                NewRdr.Read();
+                 string mystring = NewRdr[0].ToString();
+                NewRdr.Close();
+
+                foreach (var item in gameTitle)
+            { 
+                    RadioButton radio = new RadioButton();
+                    radio.Name = "game";
+                    radio.Content = item.ToString();
+                myLibary.Children.Add(radio);
+                Grid.SetColumn(myLibary, 1);
+                Grid.SetRow(myLibary, 5);
+                if (item == mystring)
+                {
+                    RadioButton radioHit = new RadioButton();
+                    radioHit.Name = "gameHit";
+                    radioHit.Content = item.ToString();
+                    nowHot.Children.Add(radioHit);
+                    Grid.SetColumn(nowHot, 0);
+                    Grid.SetRow(nowHot, 0);
+                }
+            }
+
+            connection.Close();
         }
 
         private void home_MouseDown(object sender, MouseButtonEventArgs e)
@@ -82,5 +110,9 @@ namespace Amuse
         public static readonly DependencyProperty IsMenuExpandedProperty =
             DependencyProperty.Register("IsMenuExpanded", typeof(bool), typeof(MainWindow));
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

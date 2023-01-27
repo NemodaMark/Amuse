@@ -142,17 +142,16 @@
                 </StackPanel.Resources>
 
                 <TextBlock Text="New Releas" Margin="39,18,0,0"/>
-                <RadioButton Content="Toon Cup" Tag="assets/toonicon.png"/>
+                <StackPanel Name="nowHot" Height="50" />
+
+
 
                 <TextBlock Text="My libary" Margin="39,18,0,0"/>
-                <RadioButton Content="Crab Game" Tag="assets/crabicon.ico"/>
 
-                <RadioButton GroupName="ok" Content="Other Game"/>
-                
-                <StackPanel Name="asd">
-                    
-                </StackPanel>
-                
+                <StackPanel Name="myLibary"/>
+
+
+
             </StackPanel>
 
             <ToggleButton Grid.Row="2" Background="Transparent" BorderThickness="2" HorizontalAlignment="Left"
