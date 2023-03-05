@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Nemoda Márk\Desktop\Sulis\Amuse\obj\Debug\
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\
 Amuse
 none
 false
 DEBUG;TRACE
-C:\Users\Nemoda Márk\Desktop\Sulis\Amuse\App.xaml
-2-1933250626
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\App.xaml
+3-1416219885
 
-6-793535042
-141079657692
-Assets\icons.xaml;MainWindow.xaml;
+7-1739419883
+21-527345267
+Assets\icons.xaml;Login.xaml;MainWindow.xaml;
 
-True
+False
 

@@ -45,7 +45,6 @@ C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Numerics.Vectors
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\MySql.Data.xml
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse.csproj.AssemblyReference.cache
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse.csproj.SuggestedBindingRedirects.cache
-C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse.exe.config
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\MainWindow.g.cs
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\App.g.cs
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse_MarkupCompile.cache
@@ -60,3 +59,12 @@ C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse.csproj.CoreCompil
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse.csproj.CopyComplete
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse.exe
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Amuse.pdb
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Login.g.cs
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Buffers.xml
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Memory.xml
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Login.baml

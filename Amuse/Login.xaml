@@ -1,0 +1,25 @@
+﻿<Window x:Class="Amuse.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Amuse"
+        mc:Ignorable="d"
+        Background="#EEE5E9"
+        Title="Login to Amuse" Height="350" Width="250"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,140,0,0" TextWrapping="Wrap" Text="write your username here!" VerticalAlignment="Top" Width="200" Height="20" FontFamily="Candara Light" FontStretch="Normal" TextChanged="email_TextChanged"/>
+        
+        <TextBox x:Name="password" HorizontalAlignment="Left" Margin="28,202,0,0" TextWrapping="Wrap" Text="write your password here!" VerticalAlignment="Top" Width="200" Height="20" RenderTransformOrigin="0.488,1.9" FontFamily="Candara Light" FontStretch="Normal"/>
+        <Label Content="username" Margin="25,112,26,211" FontFamily="Candara Light" FontStretch="Normal"/>
+        <Label Content="Passord" Margin="28,176,22,148" FontFamily="Candara Light" FontStretch="Normal"/>
+        
+        <Button Content="Login" HorizontalAlignment="Left" Margin="56,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="Button_Click"/>
+        
+        <Image HorizontalAlignment="Left" Height="100" Margin="72,12,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>
