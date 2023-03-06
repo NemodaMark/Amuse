@@ -27,15 +27,19 @@ namespace Amuse
         MySqlConnection connection = new MySqlConnection(connectionStr);
         List<string> gameTitle = new List<string>();
         List<string> strings = new List<string>();
+        public string ReceivedData { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            #region variables
             DateTime dateTime = DateTime.MinValue;
             int newest = 0;
             
-            connection.Open();
+            #endregion
+
             string libary = $"SELECT `id`,`title`,`added` FROM `games`;";
             MySqlCommand libaryCmd = new MySqlCommand(libary, connection);
+            connection.Open();
             MySqlDataReader libaryRdr = libaryCmd.ExecuteReader();
             while (libaryRdr.Read())
             {
@@ -75,6 +79,8 @@ namespace Amuse
             }
 
             connection.Close();
+           
+
         }
 
         private void home_MouseDown(object sender, MouseButtonEventArgs e)

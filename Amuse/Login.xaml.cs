@@ -23,6 +23,7 @@ namespace Amuse
     {
         static string connectionStr = "server=localhost;database=amuse;username=root;port=3306;password=";
         MySqlConnection connection = new MySqlConnection(connectionStr);
+        public string user { get;  set; }
         public Login()
         {
             InitializeComponent();
@@ -30,36 +31,35 @@ namespace Amuse
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (true)
-            {
-                string user = username.Text;
-                string passHash = BCrypt.Net.BCrypt.HashPassword(password.Text);
+                       user = username.Text;
+                string userpass = password.Text;
 
                 string DataUser = String.Empty;
                 string DataPass = String.Empty;
 
                 string query = $"SELECT `username`,`password` FROM `users` " +
-                    $"WHERE `username` = '{user}' and `password` = '{passHash}';";
-                MySqlCommand mySqlCommand = new MySqlCommand(query);
-                MySqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader();
+                    $"WHERE `username` = '{user}';";
+                MySqlCommand mySqlCommand = new MySqlCommand(query,connection);
                 connection.Open();
+                MySqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader();
                 while (mySqlDataReader.Read())
                 {
                     DataUser = mySqlDataReader.GetString(0);
                     DataPass = mySqlDataReader.GetString(1);
                 }
-
-                bool HashCheck = passHash == DataPass ? true : false;
+            connection.Close();
+                bool HashCheck = BCrypt.Net.BCrypt.Verify(userpass, DataPass);
 
                 if (HashCheck == true)
                 {
-                    MessageBox.Show("You successfully logged in! Have a great day!");
+                MessageBox.Show("You successfully logged in!");
+                    MainWindow main = new MainWindow();
+                    main.Show(); this.Close();
                 }
                 else if (HashCheck == false)
                 {
                     MessageBox.Show("Opps! Check your username or password!");
                 }
-            }
         }
 
         private void email_TextChanged(object sender, TextChangedEventArgs e)

@@ -24,7 +24,7 @@
             <Button
                 x:Name="CloseButton"
                 Style="{StaticResource WindowButtonsStyle}"
-                Content="{StaticResource ResourceKey=WindowButtonsStyle}"
+                Content="X"
                 Click="closeBt_Click"
                 Tag="IsClosedButton"
             />
