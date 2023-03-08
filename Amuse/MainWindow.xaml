@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Amuse"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="Amouse launcher" Width="1280" Height="720"
+        Title="Amuse launcher" Width="1280" Height="720"
         x:Name="home"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
