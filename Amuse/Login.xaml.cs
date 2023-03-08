@@ -23,6 +23,8 @@ namespace Amuse
     {
         static string connectionStr = "server=localhost;database=amuse;username=root;port=3306;password=";
         MySqlConnection connection = new MySqlConnection(connectionStr);
+        public static int userID = 0;
+
         public string user { get;  set; }
         public Login()
         {
@@ -32,12 +34,12 @@ namespace Amuse
         private void Button_Click(object sender, RoutedEventArgs e)
         {
                        user = username.Text;
-                string userpass = password.Text;
+                string userpass = password.Password;
 
                 string DataUser = String.Empty;
                 string DataPass = String.Empty;
 
-                string query = $"SELECT `username`,`password` FROM `users` " +
+                string query = $"SELECT `username`,`password`,`id` FROM `users` " +
                     $"WHERE `username` = '{user}';";
                 MySqlCommand mySqlCommand = new MySqlCommand(query,connection);
                 connection.Open();
@@ -46,6 +48,7 @@ namespace Amuse
                 {
                     DataUser = mySqlDataReader.GetString(0);
                     DataPass = mySqlDataReader.GetString(1);
+                    userID = mySqlDataReader.GetInt32(2);
                 }
             connection.Close();
                 bool HashCheck = BCrypt.Net.BCrypt.Verify(userpass, DataPass);

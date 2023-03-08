@@ -10,14 +10,19 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterOwner">
-    <Grid Background="#FFEEE5E9">
-        <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,140,0,0" TextWrapping="Wrap" Text="write your username here!" VerticalAlignment="Top" Width="200" Height="20" FontFamily="Candara Light" FontStretch="Normal" TextChanged="email_TextChanged"/>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2B303A" Offset="0.232"/>
+                <GradientStop Color="#FFD64933" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="20" FontFamily="Candara Light" FontStretch="Normal" TextChanged="email_TextChanged"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="23,201,0,0" VerticalAlignment="Top" Width="198" Height="20"/>
+        <Label Content="Username" Margin="25,112,26,211" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
+        <Label Content="Passord" Margin="24,175,26,149" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
 
-        <TextBox x:Name="password" HorizontalAlignment="Left" Margin="28,202,0,0" TextWrapping="Wrap" Text="write your password here!" VerticalAlignment="Top" Width="200" Height="20" RenderTransformOrigin="0.488,1.9" FontFamily="Candara Light" FontStretch="Normal"/>
-        <Label Content="username" Margin="25,112,26,211" FontFamily="Candara Light" FontStretch="Normal"/>
-        <Label Content="Passord" Margin="28,176,22,148" FontFamily="Candara Light" FontStretch="Normal"/>
-
-        <Button Content="Login" HorizontalAlignment="Left" Margin="56,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FF92DCE5">
+        <Button Content="Login" HorizontalAlignment="Left" Margin="56,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFD64933" FontFamily="Tahoma">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

@@ -55,7 +55,7 @@
         </StackPanel>
 
 
-        <Grid Name="MenuGrid" Width="220" Background="#2B303A">
+        <Grid Name="MenuGrid" Width="220" Background="#FF2B303A">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition />
@@ -141,14 +141,14 @@
 
                 </StackPanel.Resources>
 
-                <TextBlock Text="New Releas" Margin="39,18,0,0"/>
-                <StackPanel Name="nowHot" Height="50" />
+                <TextBlock Text="New Releas" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
+                <StackPanel Name="recentRelease" Height="50" />
 
 
 
-                <TextBlock Text="My libary" Margin="39,18,0,0"/>
+                <TextBlock Text="My libary" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
 
-                <StackPanel Name="myLibary"/>
+                <StackPanel Name="userLibary"/>
 
 
 
