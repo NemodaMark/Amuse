@@ -22,7 +22,7 @@
         <Label Content="Username" Margin="25,112,26,211" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
         <Label Content="Passord" Margin="24,175,26,149" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
 
-        <Button Content="Login" HorizontalAlignment="Left" Margin="56,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFD64933" FontFamily="Tahoma">
+        <Button x:Name="LoginBt" Content="Login" HorizontalAlignment="Left" Margin="56,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

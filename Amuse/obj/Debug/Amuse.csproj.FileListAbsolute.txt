@@ -68,3 +68,5 @@ C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Memory.xml
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\Login.baml
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\games.g.cs
+C:\Users\Nemoda Márk\Desktop\menu\Amuse\Amuse\obj\Debug\games.baml

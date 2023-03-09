@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Amuse
 {
@@ -71,6 +72,7 @@ namespace Amuse
                         RadioButton libaryRadioButton = new RadioButton();
                         libaryRadioButton.Name = "userGame";
                         libaryRadioButton.Content = libaryDataReader[0].ToString();
+                        libaryRadioButton.Checked += userGames_Checked;
                         userLibary.Children.Add(libaryRadioButton);
                         Grid.SetColumn(userLibary, 1);
                         Grid.SetRow(userLibary, 5);
@@ -112,6 +114,23 @@ namespace Amuse
             DependencyProperty.Register("IsMenuExpanded", typeof(bool), typeof(MainWindow));
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void LogoutBt_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show(); this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+            //Store
+        {
+
+        }
+
+        private void userGames_Checked(object sender, RoutedEventArgs e)
         {
             
         }
