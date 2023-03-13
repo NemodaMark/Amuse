@@ -168,7 +168,7 @@
                     </ControlTemplate>
                 </ToggleButton.Template>
             </ToggleButton>
-            <Button Content="Store" HorizontalAlignment="Center" VerticalAlignment="Top" Width="216" Height="26" Grid.Row="2" Margin="0,29,0,0" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}" Background="#FF2B303A" Click="Button_Click_1">
+            <Button Content="Store" Grid.Row="2" Margin="0,20,0,10" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}" Background="#FF2B303A" Click="Button_Click_1" HorizontalAlignment="Center" Width="216">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

@@ -25,8 +25,10 @@ namespace Amuse
     public partial class MainWindow : Window
     {
         // todo: Ezt javítsd ki - (kréta) :D 
-        static string connectionStr = "server=localhost;database=amuse;username=root;port=3306;password=";
+        internal static string connectionStr = "server=localhost;database=amuse;username=root;port=3306;password=";
+        internal static string clickedGame = string.Empty;
         MySqlConnection connection = new MySqlConnection(connectionStr);
+        RadioButton libaryRadioButton;
 
         public string ReceivedData { get; set; }
         public MainWindow()
@@ -60,7 +62,6 @@ namespace Amuse
             int userID = Login.userID;
             string libaryQuery = $"SELECT title FROM `orders` INNER JOIN games on gameID = games.id WHERE userID = '{userID}';";
             List<string> gamesLibary = new List<string>();
-
             MySqlCommand libaryCommand;
             MySqlDataReader libaryDataReader;
 
@@ -69,10 +70,10 @@ namespace Amuse
                 libaryDataReader = libaryCommand.ExecuteReader();
                     while (libaryDataReader.Read())
                     {
-                        RadioButton libaryRadioButton = new RadioButton();
-                        libaryRadioButton.Name = "userGame";
+                        libaryRadioButton = new RadioButton();
+                        libaryRadioButton.Name = "title";
                         libaryRadioButton.Content = libaryDataReader[0].ToString();
-                        libaryRadioButton.Checked += userGames_Checked;
+                        libaryRadioButton.Checked += title_Checked;
                         userLibary.Children.Add(libaryRadioButton);
                         Grid.SetColumn(userLibary, 1);
                         Grid.SetRow(userLibary, 5);
@@ -130,9 +131,14 @@ namespace Amuse
 
         }
 
-        private void userGames_Checked(object sender, RoutedEventArgs e)
+        private void title_Checked(object sender, RoutedEventArgs e)
         {
-            
+            foreach (RadioButton radioButton in userLibary.Children){
+                if (radioButton.IsChecked == true){
+                    clickedGame = radioButton.Content.ToString();
+                    MainFrame.Content = new games();
+                }
+            }
         }
     }
 }

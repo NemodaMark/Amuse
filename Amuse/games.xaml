@@ -8,19 +8,23 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="games">
 
-    <Grid>
+    <Grid Margin="0,0,5,2">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
                 <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Image RenderTransformOrigin="0.47,0.487" Margin="0,0,0,320">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/Névtelen.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Label Content="Game title " HorizontalAlignment="Left" Margin="17,83,0,0" VerticalAlignment="Top" Width="341" FontSize="55" Background="{x:Null}" FontFamily="Tahoma"/>
+        <Image x:Name="Header" RenderTransformOrigin="0.47,0.487" Margin="0,1,0,332" OpacityMask="White" Stretch="UniformToFill" Source="/Névtelen.png" HorizontalAlignment="Center" Width="1086"/>
+        <Label x:Name="gametitle" Content="Game title " HorizontalAlignment="Left" Margin="12,5,0,0" VerticalAlignment="Top" Width="528" FontSize="55" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
+        <Button x:Name="Play" Content="Play" HorizontalAlignment="Left" Margin="656,129,0,0" VerticalAlignment="Top" Width="114" Height="31" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="gamecreator" Content="Game Creator" HorizontalAlignment="Left" Margin="28,66,0,0" VerticalAlignment="Top" Width="360" FontSize="20" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
 
     </Grid>
 </Page>
