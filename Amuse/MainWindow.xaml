@@ -184,5 +184,6 @@
             </Button.Resources>
         </Button>
         <Frame Grid.Column="1" Content="" NavigationUIVisibility="Hidden" x:Name="MainFrame" Background="#FFEEE5E9" Foreground="#FFEEE5E9"/>
+        <Label x:Name="user" Content="Username" Margin="12,8,8,684" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
     </Grid>
 </Window>

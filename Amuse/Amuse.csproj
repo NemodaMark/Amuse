@@ -164,32 +164,5 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="49-Gaming-Wallpapers-1920x1080+-Album-on-Imgur.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="416648.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="307233.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pink_snowed_mountains-1920x1080.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="macos-big-sur-apple-layers-fluidic-colorful-dark-wwdc-2020-2560x1440-1432.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="rPp28t.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="gti.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="torii-gates-lake-monochrome-wallpaper-preview.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="mr2.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -25,7 +25,7 @@ namespace Amuse
         MySqlConnection connection = new MySqlConnection(connectionStr);
         public static int userID = 0;
 
-        public string user { get;  set; }
+        public static string user { get;  set; }
         public Login()
         {
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace Amuse
 
                 if (HashCheck == true)
                 {
-                MessageBox.Show("You successfully logged in!");
+                    
                     MainWindow main = new MainWindow();
                     main.Show(); this.Close();
                 }

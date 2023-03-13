@@ -29,11 +29,10 @@ namespace Amuse
         internal static string clickedGame = string.Empty;
         MySqlConnection connection = new MySqlConnection(connectionStr);
         RadioButton libaryRadioButton;
-
-        public string ReceivedData { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            user.Content = Login.user;
             #region recent game
             // A legutolsó hozzáadott játék | the latest game added
 
