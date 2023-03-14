@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel 
-            Grid.Column="1" Orientation="Horizontal" FlowDirection="RightToLeft" 
+            Grid.Column="0" Orientation="Horizontal" FlowDirection="RightToLeft" 
             HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" >
             <Button
                 x:Name="CloseButton"
@@ -27,31 +27,25 @@
                 Content="X"
                 Click="closeBt_Click"
                 Tag="IsClosedButton"
+                Foreground="Snow"
             />
 
             <Button
                 x:Name="restoreBt"
                 Margin="10,0"
-                Click="restoreBt_Click">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource WindowButtonsStyle}">
-                        <Setter Property="Content" Value="{StaticResource ResourceKey=WindowButtonsStyle}"/>
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding ElementName=home,Path=WindowState}" Value="Maximized">
-                                <Setter Property="Content" Value="{StaticResource ResourceKey=WindowButtonsStyle}"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                Click="restoreBt_Click"
+                Style="{StaticResource WindowButtonsStyle}"
+                Foreground="Snow">
+                []
             </Button>
 
 
             <Button
                 x:Name="minimizeBt"
                 Style="{StaticResource WindowButtonsStyle}"
-                Content="{StaticResource ResourceKey=WindowButtonsStyle}"
+                Content="_"
                 Click="minimizeBt_Click"
-            />
+                Foreground="Snow"/>
         </StackPanel>
 
 
@@ -63,13 +57,14 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="20"/>
                 <RowDefinition />
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
 
-            <StackPanel Margin="0,32,0,0" Grid.Row="1">
+            <StackPanel Margin="0,32,0,0" Grid.Row="2">
 
                 <StackPanel.Resources>
                     <Style TargetType="{x:Type RadioButton}">
@@ -147,12 +142,12 @@
 
                 </StackPanel.Resources>
 
-                <TextBlock Text="New Releas" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
+                <TextBlock Text="New Release" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9" FontWeight="Bold"/>
                 <StackPanel Name="recentRelease" Height="50" />
 
 
 
-                <TextBlock Text="My libary" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
+                <TextBlock Text="My Libary" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
 
                 <StackPanel Name="userLibary"/>
 
@@ -160,7 +155,7 @@
 
             </StackPanel>
 
-            <ToggleButton Grid.Row="2" Background="Transparent" BorderThickness="2" HorizontalAlignment="Left"
+            <ToggleButton Grid.Row="3" Background="Transparent" BorderThickness="2" HorizontalAlignment="Left"
                           Height="26" Width="30" Margin="39,0,0,37" IsChecked="{Binding IsMenuExpanded, ElementName=home, Mode=TwoWay,FallbackValue=True}" Cursor="Hand">
                 <ToggleButton.Template>
                     <ControlTemplate>
@@ -168,15 +163,16 @@
                     </ControlTemplate>
                 </ToggleButton.Template>
             </ToggleButton>
-            <Button Content="Store" Grid.Row="2" Margin="0,20,0,10" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}" Background="#FF2B303A" Click="Button_Click_1" HorizontalAlignment="Center" Width="216">
+            <Button Content="Store" Margin="20,16,20,515" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Background="#FF2B303A" Click="Button_Click_1" Grid.Row="2">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
+            <Image Margin="2,6,166,6" Source="/Névtelen.png" Stretch="UniformToFill" Grid.Row="3"/>
         </Grid>
-        <Button x:Name="LogoutBt" Content="Logout" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="25" Width="216" BorderBrush="{x:Null}" Click="LogoutBt_Click" FontFamily="Tahoma" Background="#FF2B303A" Foreground="#FFEEE5E9">
+        <Button x:Name="LogoutBt" Content="Logout" Margin="20,62,20,0" VerticalAlignment="Top" Height="26" BorderBrush="Black" Click="LogoutBt_Click" FontFamily="Tahoma" Background="#FF2B303A" Foreground="#FFEEE5E9">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -184,6 +180,6 @@
             </Button.Resources>
         </Button>
         <Frame Grid.Column="1" Content="" NavigationUIVisibility="Hidden" x:Name="MainFrame" Background="#FFEEE5E9" Foreground="#FFEEE5E9"/>
-        <Label x:Name="user" Content="Username" Margin="12,8,8,684" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
+        <Label x:Name="user" Content="Username" Margin="55,671,3,15" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9" FontSize="18"/>
     </Grid>
 </Window>

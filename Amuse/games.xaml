@@ -8,16 +8,16 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="games">
 
-    <Grid Margin="0,0,5,2">
+    <Grid Margin="0,0,-2,-2" RenderTransformOrigin="0.444,0.594">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
-                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FF2B303A" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Image x:Name="Header" RenderTransformOrigin="0.47,0.487" Margin="0,1,0,332" OpacityMask="White" Stretch="UniformToFill" Source="/Névtelen.png" HorizontalAlignment="Center" Width="1086"/>
+        <Image x:Name="Header" RenderTransformOrigin="0.47,0.487" Margin="0,-31,0,0" OpacityMask="White" Stretch="UniformToFill" Source="/Névtelen.png" HorizontalAlignment="Center" Width="1070" Height="147" VerticalAlignment="Top"/>
         <Label x:Name="gametitle" Content="Game title " HorizontalAlignment="Left" Margin="12,5,0,0" VerticalAlignment="Top" Width="528" FontSize="55" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
-        <Button x:Name="Play" Content="Play" HorizontalAlignment="Left" Margin="656,129,0,0" VerticalAlignment="Top" Width="114" Height="31" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}">
+        <Button x:Name="Play" Content="Play" Margin="0,42,20,0" VerticalAlignment="Top" Height="31" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}" OpacityMask="#FFE600FF" HorizontalAlignment="Right" Width="114">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -25,6 +25,8 @@
             </Button.Resources>
         </Button>
         <Label x:Name="gamecreator" Content="Game Creator" HorizontalAlignment="Left" Margin="28,66,0,0" VerticalAlignment="Top" Width="360" FontSize="20" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
+        <Image x:Name="currentPics" Margin="417,133,112,56" Source="/Névtelen.png" Stretch="UniformToFill"/>
+        <TextBlock x:Name="gamedescription" Margin="22,145,561,77" TextWrapping="Wrap" Text="TextBlock" Foreground="#FFEEE5E9" FontFamily="Tahoma" IsEnabled="False" LineStackingStrategy="BlockLineHeight"/>
 
     </Grid>
 </Page>

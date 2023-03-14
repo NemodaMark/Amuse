@@ -33,20 +33,25 @@ namespace Amuse
             InitializeComponent();
             string title = MainWindow.clickedGame;
             string creator = string.Empty;
+            string description = string.Empty;
             string cover = string.Empty;
-            string query = $"SELECT title,cover FROM `games` WHERE title = \"{title}\";";
+
+            string query = $"SELECT cover,users.username,description FROM `games` INNER JOIN users on creator = users.id WHERE title = \"{title}\";";
             MySqlCommand mySqlCommand = new MySqlCommand(query, connection);
             connection.Open();
             MySqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader();
             while (mySqlDataReader.Read())
             { 
-                creator = mySqlDataReader.GetString(0);
-                cover = mySqlDataReader.GetString(1);
+                cover = mySqlDataReader.GetString(0);
+                creator = mySqlDataReader.GetString(1);
+                description = mySqlDataReader.GetString(2);
+
             }
             connection.Close();
 
             gametitle.Content = title;
             gamecreator.Content = creator;
+            gamedescription.Text = description;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

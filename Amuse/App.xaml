@@ -7,7 +7,7 @@
         <Style
                 x:Key="WindowButtonsStyle"
                 TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Background" Value="Orange" />
             <Setter Property="Cursor" Value="Hand" />
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="Height" Value="25" />
