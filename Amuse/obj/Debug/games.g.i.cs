@@ -83,7 +83,7 @@ namespace Amuse {
         
         #line 29 "..\..\games.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button Play_Copy1;
+        internal System.Windows.Controls.Button nextPictBt;
         
         #line default
         #line hidden
@@ -178,10 +178,10 @@ namespace Amuse {
             #line hidden
             return;
             case 6:
-            this.Play_Copy1 = ((System.Windows.Controls.Button)(target));
+            this.nextPictBt = ((System.Windows.Controls.Button)(target));
             
             #line 29 "..\..\games.xaml"
-            this.Play_Copy1.Click += new System.Windows.RoutedEventHandler(this.Button_Click);
+            this.nextPictBt.Click += new System.Windows.RoutedEventHandler(this.Button_Click);
             
             #line default
             #line hidden

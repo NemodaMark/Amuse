@@ -69,7 +69,7 @@ namespace Amuse
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-            //start game | játék indítása
+        //start game | játék indítása
         {
             string pathToExe = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Amuse", "storage", "Minecraft.exe");
             try
@@ -80,9 +80,13 @@ namespace Amuse
             catch (Win32Exception ex)
             {
                 // Handle the exception
-                MessageBox.Show("Win32 error occurred:"+ ex.Message);
+                MessageBox.Show("Win32 error occurred:" + ex.Message);
             }
 
+        }
+        private void nextPictBt_Click(object sender, RoutedEventArgs e)
+        {
+            currentPics.Source=\2.jpg;
         }
     }
 }

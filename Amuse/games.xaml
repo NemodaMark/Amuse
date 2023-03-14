@@ -18,7 +18,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Image x:Name="currentPics" Margin="299,162,48,63" Stretch="UniformToFill"/>
+        <Image x:Name="currentPics" Margin="299,162,48,63" Stretch="UniformToFill" Source="/1.jpg"/>
         <Button x:Name="Play_Copy" Content="Prew" Margin="307,0,439,70" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -26,7 +26,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="Play_Copy1" Content="Next" Margin="693,0,53,70" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom">
+        <Button x:Name="nextPictBt" Content="Next" Margin="693,0,53,70" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
