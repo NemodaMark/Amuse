@@ -147,9 +147,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\test.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Névtelen.png" />
   </ItemGroup>
   <ItemGroup>
