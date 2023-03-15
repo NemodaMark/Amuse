@@ -10,19 +10,17 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterOwner">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF2B303A" Offset="0.232"/>
-                <GradientStop Color="#FFD64933" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="20" FontFamily="Candara Light" FontStretch="Normal" TextChanged="email_TextChanged"/>
-        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="23,201,0,0" VerticalAlignment="Top" Width="198" Height="20"/>
-        <Label Content="Username" Margin="25,112,26,211" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
-        <Label Content="Passord" Margin="24,175,26,149" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9"/>
+    <Grid Background="Black">
+        <Border CornerRadius="5" BorderThickness="3" BorderBrush="#FFF5F5F5" Width="200" Margin="22,142,28,184">
+            <TextBox x:Name="username" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="20" FontFamily="Arial" FontStretch="Normal" TextChanged="email_TextChanged" BorderBrush="Black" Background="WhiteSmoke" Foreground="#FF585858" SelectionBrush="Black"/>
+        </Border>
+        <Border CornerRadius="5" BorderThickness="3" BorderBrush="#FFF5F5F5" Width="200" Margin="24,198,26,128">
+            <PasswordBox x:Name="password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="198" Height="20" Background="WhiteSmoke" SelectionBrush="#FFABABAB" FontFamily="Arial" BorderBrush="Black" Foreground="#FF4E4E4E"/>
+        </Border>
+        <Label Content="Username" Margin="25,112,26,211" FontFamily="Arial Black" FontStretch="Normal" Foreground="#FFEEE5E9" FontWeight="Bold"/>
+        <Label Content="Password" Margin="24,175,26,149" FontFamily="Arial Black" FontStretch="Normal" Foreground="#FFEEE5E9" FontWeight="Bold"/>
 
-        <Button x:Name="LoginBt" Content="Login" HorizontalAlignment="Left" Margin="56,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}">
+        <Button x:Name="LoginBt" Content="Login" HorizontalAlignment="Left" Margin="46,256,0,0" VerticalAlignment="Top" Width="152" Height="26" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="Black" Background="#F5F5F5F5" BorderBrush="Black" FontWeight="Bold">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -30,7 +28,7 @@
             </Button.Resources>
         </Button>
 
-        <Image HorizontalAlignment="Left" Height="100" Margin="72,12,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="74" Margin="84,25,0,0" VerticalAlignment="Top" Width="74" Source="/logo.ico" Stretch="Fill"/>
 
     </Grid>
 </Window>

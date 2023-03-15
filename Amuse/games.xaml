@@ -8,36 +8,43 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="games">
 
-    <Grid Margin="0,0,-2,-2" RenderTransformOrigin="0.444,0.594" Background="#FF2B303A">
-        <Image x:Name="Header" RenderTransformOrigin="0.47,0.487" Margin="0,-31,0,0" OpacityMask="White" Stretch="UniformToFill" Source="/Névtelen.png" HorizontalAlignment="Center" Width="1070" Height="147" VerticalAlignment="Top"/>
-        <Label x:Name="gametitle" Content="Game title " HorizontalAlignment="Left" Margin="12,5,0,0" VerticalAlignment="Top" Width="528" FontSize="55" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
-        <Button x:Name="Play" Content="Play" Margin="0,42,20,0" VerticalAlignment="Top" Height="31" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}" OpacityMask="#FFE600FF" HorizontalAlignment="Right" Width="114">
+    <Grid Margin="-1,0,-1,-2" RenderTransformOrigin="0.444,0.594">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="375*"/>
+            <ColumnDefinition Width="26*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="gametitle" Content="Game title " HorizontalAlignment="Left" Margin="12,5,0,0" VerticalAlignment="Top" Width="528" FontSize="55" FontFamily="Arial Black" Foreground="WhiteSmoke"/>
+        <Button x:Name="Play" Content="Play" Margin="0,30,13,0" VerticalAlignment="Top" Height="31" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" OpacityMask="Black" HorizontalAlignment="Right" Width="114" Background="#FF1F1F1F" FontSize="14" Grid.ColumnSpan="2" BorderBrush="Black" Foreground="WhiteSmoke">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Image x:Name="currentPics" Margin="299,162,48,63" Stretch="UniformToFill" Source="/1.jpg"/>
-        <Button x:Name="prewPicsBt" Content="Prew" Margin="307,0,439,70" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom" Click="prewPicsBt_Click">
+
+        <Border CornerRadius="5" BorderThickness="3" BorderBrush="Black" Margin="387,125,27,51" Grid.ColumnSpan="2">
+            <Image x:Name="currentPics"  Stretch="UniformToFill" Source="/Assets/1.jpg" Grid.ColumnSpan="2"/>
+        </Border>
+        <Button x:Name="prewPicsBt" Content="Prew" Margin="401,0,293,25" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial" Height="22" VerticalAlignment="Bottom" Click="prewPicsBt_Click" OpacityMask="Black" Background="#FF1F1F1F" FontSize="14" Foreground="WhiteSmoke">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="nextPictBt" Content="Next" Margin="693,0,53,70" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom" Click="nextPictBt_Click">
+        <Button x:Name="nextPictBt" Content="Next" Margin="705,0,41,25" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial" Height="22" VerticalAlignment="Bottom" Click="nextPictBt_Click" OpacityMask="Black" Background="#FF1F1F1F" FontSize="14" Grid.ColumnSpan="2" Foreground="WhiteSmoke">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Label x:Name="gamecreator" Content="Creator title " HorizontalAlignment="Left" Margin="30,66,0,0" VerticalAlignment="Top" Width="528" FontSize="18" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
-        <Label x:Name="gametitle_Copy1" Content="Description:" Margin="7,132,701,293" FontSize="14" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
-        <Label x:Name="gametitle_Copy2" Content="Ingame footage:" Margin="307,135,388,290" FontSize="14" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
-        <Label x:Name="gamedescription" Content="" Margin="23,167,535,57" FontSize="14" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
-        <Button x:Name="Search" Content="search" Margin="0,76,34,0" VerticalAlignment="Top" Height="20" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}" OpacityMask="#FFE600FF" HorizontalAlignment="Right" Width="86" Click="Search_Click">
+        <Label x:Name="gamecreator" Content="Creator title " HorizontalAlignment="Left" Margin="30,66,0,0" VerticalAlignment="Top" Width="528" FontSize="18" FontFamily="Arial Black" Foreground="WhiteSmoke"/>
+        <Label x:Name="FootageLab" Content="Ingame footage:" Margin="397,101,204,324" FontSize="14" FontFamily="Arial Black" Foreground="WhiteSmoke"/>
+        <Label x:Name="descriptionLab" Content="Description:" Margin="32,157,624,268" FontSize="14" FontFamily="Arial Black" Foreground="WhiteSmoke"/>
+
+        <Label x:Name="gamedescription" Content="" Margin="22,180,484,44" FontSize="14" FontFamily="Arial" Foreground="WhiteSmoke"/>
+        <Button x:Name="Search" Content="search" Margin="0,34,78,0" VerticalAlignment="Top" Height="20" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" OpacityMask="Black" HorizontalAlignment="Right" Width="86" Click="Search_Click" Background="#FF1F1F1F" FontSize="14" RenderTransformOrigin="0.616,-0.8" BorderBrush="Black" Foreground="WhiteSmoke">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

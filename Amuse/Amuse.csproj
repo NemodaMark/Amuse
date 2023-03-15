@@ -49,6 +49,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
       <HintPath>packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
@@ -165,8 +168,11 @@
     <Resource Include="Assets\1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="logo.ico" />
     <Resource Include="Assets\2.jpg" />
     <Resource Include="Assets\3.jpg" />
+    <Resource Include="Assets\Amuse.png" />
+    <Resource Include="Assets\logo.ico" />
     <Resource Include="Assets\cover.jpg" />
     <Content Include="Assets\Minecraft.exe" />
   </ItemGroup>

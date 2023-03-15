@@ -57,11 +57,7 @@ namespace Amuse
             connection.Close();
 
             gametitle.Content = title;
-            gamecreator.Content = creator;
-
-            string imagePath = @"D:\Vizsgamunka\C#\Amuse\Amuse\Assets\" + cover;
-            BitmapImage image = new BitmapImage(new Uri(imagePath));
-            Header.Source = image;
+            gamecreator.Content ="Created by - "+creator;
 
             string imagePath2 = @"D:\Vizsgamunka\C#\Amuse\Amuse\Assets\" + Gameimage + ".jpg";
             BitmapImage image2 = new BitmapImage(new Uri(imagePath2));
