@@ -19,14 +19,14 @@
             </Button.Resources>
         </Button>
         <Image x:Name="currentPics" Margin="299,162,48,63" Stretch="UniformToFill" Source="/1.jpg"/>
-        <Button x:Name="Play_Copy" Content="Prew" Margin="307,0,439,70" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom">
+        <Button x:Name="prewPicsBt" Content="Prew" Margin="307,0,439,70" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom" Click="prewPicsBt_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="nextPictBt" Content="Next" Margin="693,0,53,70" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom">
+        <Button x:Name="nextPictBt" Content="Next" Margin="693,0,53,70" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Height="22" VerticalAlignment="Bottom" Click="nextPictBt_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -37,6 +37,13 @@
         <Label x:Name="gametitle_Copy1" Content="Description:" Margin="7,132,701,293" FontSize="14" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
         <Label x:Name="gametitle_Copy2" Content="Ingame footage:" Margin="307,135,388,290" FontSize="14" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
         <Label x:Name="gamedescription" Content="" Margin="23,167,535,57" FontSize="14" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
+        <Button x:Name="Search" Content="search" Margin="0,76,34,0" VerticalAlignment="Top" Height="20" BorderThickness="0,0,0,0" ClipToBounds="True" Background="#FF2B303A" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="{x:Null}" OpacityMask="#FFE600FF" HorizontalAlignment="Right" Width="86" Click="Search_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Page>
