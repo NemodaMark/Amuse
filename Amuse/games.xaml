@@ -13,8 +13,8 @@
             <ColumnDefinition Width="375*"/>
             <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="gametitle" Content="Game title " HorizontalAlignment="Left" Margin="12,5,0,0" VerticalAlignment="Top" Width="528" FontSize="55" FontFamily="Arial Black" Foreground="WhiteSmoke"/>
-        <Button x:Name="Play" Content="Play" Margin="0,30,13,0" VerticalAlignment="Top" Height="31" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" OpacityMask="Black" HorizontalAlignment="Right" Width="114" Background="#FF1F1F1F" FontSize="14" Grid.ColumnSpan="2" BorderBrush="Black" Foreground="WhiteSmoke">
+        <Label x:Name="gametitle" Content="Game title " HorizontalAlignment="Left" Margin="12,5,0,0" VerticalAlignment="Top" Width="779" FontSize="55" FontFamily="Arial Black" Foreground="WhiteSmoke" Grid.ColumnSpan="2"/>
+        <Button x:Name="Play" Content="Play" Margin="0,411,621,0" VerticalAlignment="Top" Height="31" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" OpacityMask="Black" HorizontalAlignment="Right" Width="114" Background="#FF1F1F1F" FontSize="14" BorderBrush="Black" Foreground="WhiteSmoke">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -44,7 +44,7 @@
         <Label x:Name="descriptionLab" Content="Description:" Margin="32,157,624,268" FontSize="14" FontFamily="Arial Black" Foreground="WhiteSmoke"/>
 
         <Label x:Name="gamedescription" Content="" Margin="22,180,484,44" FontSize="14" FontFamily="Arial" Foreground="WhiteSmoke"/>
-        <Button x:Name="Search" Content="search" Margin="0,34,78,0" VerticalAlignment="Top" Height="20" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" OpacityMask="Black" HorizontalAlignment="Right" Width="86" Click="Search_Click" Background="#FF1F1F1F" FontSize="14" RenderTransformOrigin="0.616,-0.8" BorderBrush="Black" Foreground="WhiteSmoke">
+        <Button x:Name="Search" Content="search" Margin="0,418,525,0" VerticalAlignment="Top" Height="20" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" OpacityMask="Black" HorizontalAlignment="Right" Width="86" Click="Search_Click" Background="#FF1F1F1F" FontSize="14" RenderTransformOrigin="0.616,-0.8" BorderBrush="Black" Foreground="WhiteSmoke">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

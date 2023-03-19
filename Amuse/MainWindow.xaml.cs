@@ -130,7 +130,6 @@ namespace Amuse
         private void Button_Click(object sender, RoutedEventArgs e)
             //Refresh
         {
-
             #region recent game
             // A legutolsó hozzáadott játék | the latest game added
             recentRelease.Children.Clear();
@@ -182,12 +181,6 @@ namespace Amuse
             #endregion
         }
 
-        private void LogoutBt_Click(object sender, RoutedEventArgs e)
-        {
-            Login login = new Login();
-            login.Show(); this.Close();
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
             //Store
         {
@@ -207,6 +200,11 @@ namespace Amuse
         private void CloseBt_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void userBt_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new user();
         }
     }
 }

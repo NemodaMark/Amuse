@@ -97,7 +97,7 @@
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsChecked" Value="True">
-                                            <Setter TargetName="indicator" Property="Shape.Fill" Value="#D64933"/>
+                                            <Setter TargetName="indicator" Property="Shape.Fill" Value="#F5F5F5"/>
                                             <Setter TargetName="gameName" Property="Foreground" Value="White"/>
                                         </Trigger>
 
@@ -129,7 +129,7 @@
                         <Setter Property="Visibility" Value="Visible"/>
                         <Setter Property="HorizontalAlignment" Value="Left"/>
                         <Setter Property="VerticalAlignment" Value="Center"/>
-                        <Setter Property="Foreground" Value="#92DCE5"/>
+                        <Setter Property="Foreground" Value="#F5F5F5F5"/>
                         <Setter Property="FontWeight" Value="Bold"/>
                         <Setter Property="FontSize" Value="14"/>
                     </Style>
@@ -159,13 +159,6 @@
             </ToggleButton>
             <Image HorizontalAlignment="Left" Height="75" Margin="72,0,0,0" VerticalAlignment="Center" Width="72" Source="/Assets/logo.ico"/>
         </Grid>
-        <Button x:Name="LogoutBt" Content="Logout" Margin="58,696,89,0" VerticalAlignment="Top" Height="18" Click="LogoutBt_Click" FontFamily="Arial Black" Background="#FFDDDDDD">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-        </Button>
         <Frame Grid.Column="1" Content="" NavigationUIVisibility="Hidden" x:Name="MainFrame" Background="#FF0C0C0C"/>
         <Button x:Name="CloseBt" Content="Close" Margin="139,696,8,0" VerticalAlignment="Top" Height="18" FontFamily="Arial Black" Background="#FFDDDDDD" Click="CloseBt_Click_1">
             <Button.Resources>
@@ -188,7 +181,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="userBt" Content="Username" Margin="112,92,8,0" VerticalAlignment="Top" Height="17" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Left">
+        <Button x:Name="userBt" Content="Username" Margin="112,92,8,0" VerticalAlignment="Top" Height="17" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Left" Click="userBt_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

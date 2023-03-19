@@ -153,3 +153,5 @@ D:\Vizsgamunka\C#\Amuse\Amuse\obj\Debug\Amuse.csproj.CoreCompileInputs.cache
 D:\Vizsgamunka\C#\Amuse\Amuse\obj\Debug\Amuse.csproj.CopyComplete
 D:\Vizsgamunka\C#\Amuse\Amuse\obj\Debug\Amuse.exe
 D:\Vizsgamunka\C#\Amuse\Amuse\obj\Debug\Amuse.pdb
+D:\Vizsgamunka\C#\Amuse\Amuse\obj\Debug\user.g.cs
+D:\Vizsgamunka\C#\Amuse\Amuse\obj\Debug\user.baml
