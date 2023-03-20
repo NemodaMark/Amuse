@@ -31,7 +31,7 @@
         </Button>
         <Label x:Name="wallet" Content="Wallet" Margin="430,28,284,68" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" Grid.Row="1"/>
         <Label x:Name="userBalance" Content="balance" Margin="435,56,287,40" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" Grid.Row="1"/>
-        <Button x:Name="Logout_Copy" Content="upload cash" Margin="429,98,285,6" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Center" Click="userBt_Click" Grid.Row="1">
+        <Button x:Name="deposit" Content="upload cash" Margin="429,98,285,6" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Row="1" Click="deposit_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

@@ -51,5 +51,10 @@ namespace Amuse
             login.Show();
 
         }
+
+        private void deposit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
