@@ -14,15 +14,24 @@
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
         <Rectangle Margin="232,101,274,0" Stroke="Black" Fill="#F5F5F5F5" Grid.RowSpan="2"/>
-        <Image x:Name="UserPics" Source="Assets/1.jpg" Margin="0,0,221,19" Height="451" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="401" >
+        <Image x:Name="UserPics" Source="Assets/1.jpg" Margin="181,-85,243,70" Grid.RowSpan="2" >
             <Image.Clip>
                 <EllipseGeometry RadiusX="150" RadiusY="150" Center="200 130"/>
             </Image.Clip>
         </Image>
-        <Label x:Name="Username" Content="USERNAME" Margin="262,0,0,120" Foreground="#F5000000" FontFamily="Arial Black" FontSize="24" Background="{x:Null}" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="225" Grid.RowSpan="2"/>
-        <Label x:Name="userEmail" Content="Email" Margin="278,0,0,78" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" HorizontalAlignment="Left" Width="200" Height="30" VerticalAlignment="Bottom" Grid.Row="1"/>
-        <Label x:Name="userRole" Content="Role" Margin="239,74,508,-15" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" Grid.Row="1"/>
-        <Button x:Name="Logout" Content="Logout" Margin="450,100,0,4" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Center" Click="userBt_Click" HorizontalAlignment="Left" Width="72" Grid.Row="1">
+        <Label x:Name="Username" Content="USERNAME" Margin="265,278,310,6" Foreground="#F5000000" FontFamily="Arial Black" FontSize="24" Background="{x:Null}"/>
+        <Label x:Name="userEmail" Content="Email" Margin="285,310,315,110" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" Grid.RowSpan="2"/>
+        <Label x:Name="userRole" Content="Role" Margin="240,63,507,33" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" Grid.Row="1"/>
+        <Button x:Name="Logout" Content="Logout" Margin="241,98,487,6" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Center" Click="userBt_Click" Grid.Row="1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="wallet" Content="Wallet" Margin="430,28,284,68" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" Grid.Row="1"/>
+        <Label x:Name="userBalance" Content="balance" Margin="435,56,287,40" Foreground="#F5000000" FontFamily="Arial Black" FontSize="16" Background="{x:Null}" Grid.Row="1"/>
+        <Button x:Name="Logout_Copy" Content="upload cash" Margin="429,98,285,6" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Center" Click="userBt_Click" Grid.Row="1">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
