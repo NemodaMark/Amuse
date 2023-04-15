@@ -49,7 +49,13 @@
         </StackPanel>
 
 
-        <Grid Name="MenuGrid" Width="220" Background="Black">
+        <Grid Name="MenuGrid" Width="220">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD64933" Offset="1"/>
+                    <GradientStop Color="#FF2B303A" Offset="0.51"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="20"/>
@@ -97,7 +103,7 @@
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsChecked" Value="True">
-                                            <Setter TargetName="indicator" Property="Shape.Fill" Value="#F5F5F5"/>
+                                            <Setter TargetName="indicator" Property="Shape.Fill" Value="#D64933"/>
                                             <Setter TargetName="gameName" Property="Foreground" Value="White"/>
                                         </Trigger>
 
@@ -129,19 +135,19 @@
                         <Setter Property="Visibility" Value="Visible"/>
                         <Setter Property="HorizontalAlignment" Value="Left"/>
                         <Setter Property="VerticalAlignment" Value="Center"/>
-                        <Setter Property="Foreground" Value="#F5F5F5F5"/>
+                        <Setter Property="Foreground" Value="#92DCE5"/>
                         <Setter Property="FontWeight" Value="Bold"/>
                         <Setter Property="FontSize" Value="14"/>
                     </Style>
 
                 </StackPanel.Resources>
 
-                <TextBlock Text="New Release" Margin="39,18,0,0" FontFamily="Arial Black" FontWeight="Bold" Foreground="#F5F5F5F5" Width="106"/>
+                <TextBlock Text="New Release" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9" FontWeight="Bold"/>
                 <StackPanel Name="recentRelease" Height="50" />
 
 
 
-                <TextBlock Text="My Libary" Margin="39,18,0,0" FontFamily="Arial Black" Foreground="#F5F5F5F5"/>
+                <TextBlock Text="My Libary" Margin="39,18,0,0" FontFamily="Tahoma" Foreground="#FFEEE5E9"/>
 
                 <StackPanel Name="userLibary"/>
 
@@ -157,36 +163,23 @@
                     </ControlTemplate>
                 </ToggleButton.Template>
             </ToggleButton>
-            <Image HorizontalAlignment="Left" Height="75" Margin="72,0,0,0" VerticalAlignment="Center" Width="72" Source="/Assets/logo.ico"/>
+            <Button Content="Store" Margin="20,16,20,515" Foreground="#FFEEE5E9" FontFamily="Tahoma" BorderBrush="Black" Background="#FF2B303A" Click="Button_Click_1" Grid.Row="2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Image Margin="2,6,166,6" Source="/Névtelen.png" Stretch="UniformToFill" Grid.Row="3"/>
         </Grid>
-        <Frame Grid.Column="1" Content="" NavigationUIVisibility="Hidden" x:Name="MainFrame" Background="#FF0C0C0C"/>
-        <Button x:Name="CloseBt" Content="Close" Margin="139,696,8,0" VerticalAlignment="Top" Height="18" FontFamily="Arial Black" Background="#FFDDDDDD" Click="CloseBt_Click_1">
+        <Button x:Name="LogoutBt" Content="Logout" Margin="20,62,20,0" VerticalAlignment="Top" Height="26" BorderBrush="Black" Click="LogoutBt_Click" FontFamily="Tahoma" Background="#FF2B303A" Foreground="#FFEEE5E9">
             <Button.Resources>
-                <Style TargetType="{x:Type Border}">
+                <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="StoreBt" Content="Store" HorizontalAlignment="Left" Margin="3,92,0,0" VerticalAlignment="Top" Width="47" Height="18" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button x:Name="RefreshBt" Content="Refresh" HorizontalAlignment="Left" Margin="52,92,0,0" VerticalAlignment="Top" Width="56" Height="17" Click="Button_Click" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button x:Name="userBt" Content="Username" Margin="112,92,8,0" VerticalAlignment="Top" Height="17" BorderThickness="0,0,0,0" ClipToBounds="True" FontFamily="Arial Black" Foreground="#F5F5F5F5" Background="#F5000000" BorderBrush="Black" FontWeight="Bold" HorizontalContentAlignment="Left" Click="userBt_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-        </Button>
+        <Frame Grid.Column="1" Content="" NavigationUIVisibility="Hidden" x:Name="MainFrame" Background="#FFEEE5E9" Foreground="#FFEEE5E9"/>
+        <Label x:Name="user" Content="Username" Margin="55,671,3,15" FontFamily="Tahoma" FontStretch="Normal" Foreground="#FFEEE5E9" FontSize="18"/>
     </Grid>
 </Window>

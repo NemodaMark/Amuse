@@ -7,7 +7,7 @@
         <Style
                 x:Key="WindowButtonsStyle"
                 TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="White" />
+            <Setter Property="Background" Value="Orange" />
             <Setter Property="Cursor" Value="Hand" />
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="Height" Value="25" />
@@ -40,7 +40,7 @@
                                     <Condition Property="IsMouseOver" Value="True"/>
                                     <Condition Property="Tag" Value="IsCloseButton"/>
                                 </MultiTrigger.Conditions>
-                                <Setter Property="Background" Value="#ABABAB"/>
+                                <Setter Property="Background" Value="#D64933"/>
                             </MultiTrigger>
 
                         </ControlTemplate.Triggers>
